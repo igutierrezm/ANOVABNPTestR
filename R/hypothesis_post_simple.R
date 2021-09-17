@@ -1,4 +1,4 @@
-#' Return the XXX summary statistic associated with each factor
+#' Return the XXX statistic associated with each factor
 #'
 #' @param fit An object of class anova_bnp_model.
 #' @return A tibble with the following variables:
