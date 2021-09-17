@@ -1,5 +1,7 @@
 # ANOVABNPTestR
 
+[![docs](https://img.shields.io/badge/docs-stable-blue.svg)](https://igutierrezm.github.io/ANOVABNPTestR/)
+
 Implements the Bayesian Nonparametric Factorial ANOVA model described in XXX.
 
 ## Installation
@@ -11,7 +13,7 @@ devtools::install_github("igutierrezm/ANOVABNPTestR")
 ## Dependencies
 
 `ANOVABNPTestR` depends on Julia (v1.6.1+). 
-Users must install Julia by themmselves.
+Users must install Julia by themselves.
 
 ## Main functions
 
@@ -26,3 +28,5 @@ predictive_plot_interaction(fit, d1, d2) # plot p(y0, x, y) (interactions only)
 hypothesis_post_simple(fit)              # return the XXX summary statistic
 hypothesis_post_interaction(fit)         # return the YYY summary statistic
 ```
+
+For more information, check out the documentation.
