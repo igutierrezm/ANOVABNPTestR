@@ -16,7 +16,7 @@ Users must install Julia by themmselves.
 ## Main functions
 
 ```r
-setup() # check the julia dependencies
+setup()                                  # check the julia dependencies
 fit <- anova_bnp_poisson(y, X, ...)      # fit the model
 f_post(fit)                              # return p(y0 | x, y)
 gamma_post(fit)                          # return p(gamma | y)
