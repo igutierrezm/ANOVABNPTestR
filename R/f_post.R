@@ -1,4 +1,4 @@
-#' Return the posterior predictive pdf of a convenient grid of points
+#' Return the posterior predictive pdf
 #'
 #' @param fit An object of class anova_bnp_model.
 #' @return A tibble with the following variables:

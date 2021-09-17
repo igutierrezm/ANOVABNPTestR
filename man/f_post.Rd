@@ -2,7 +2,7 @@
 % Please edit documentation in R/f_post.R
 \name{f_post}
 \alias{f_post}
-\title{Return the posterior predictive pdf of a convenient grid of points}
+\title{Return the posterior predictive pdf}
 \usage{
 f_post(fit)
 }
@@ -18,5 +18,5 @@ A tibble with the following variables:
 }
 }
 \description{
-Return the posterior predictive pdf of a convenient grid of points
+Return the posterior predictive pdf
 }
