@@ -1,10 +1,10 @@
 # ANOVABNPTestR
 
-[![docs](https://img.shields.io/badge/docs-stable-blue.svg)](https://igutierrezm.github.io/ANOVABNPTestR/)
+[![docs](https://img.shields.io/badge/docs-stable-blue.svg)](https://igutierrezm.github.io/ANOVABNPTestR/index.html)
 
 An R package that implements the (BNP) Factorial ANOVA model described in 
 Gutiérrez et al. (2021). See the 
-[documentation](https://igutierrezm.github.io/ANOVABNPTestR/) 
+[documentation](https://igutierrezm.github.io/ANOVABNPTestR/index.html) 
 for details.
 
 ## Installation
