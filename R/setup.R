@@ -4,6 +4,7 @@
 #' For more information about the setup and discovery of Julia, see
 #' the JuliaConnectoR's package documentation, section "Setup".
 #' @importFrom JuliaConnectoR juliaEval
+#' @export
 setup <- function() {
   message("Checking that Julia (version >= 1.0) can be started...")
   if (!JuliaConnectoR::juliaSetupOk()) {

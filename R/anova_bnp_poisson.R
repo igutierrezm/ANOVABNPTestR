@@ -13,6 +13,7 @@
 #' @return An object of class 'anova_bnp_model'.
 #' @importFrom dplyr as_tibble
 #' @importFrom JuliaConnectoR juliaImport
+#' @export
 anova_bnp_poisson <- function(
   y, X, iter = 4000L, warmup = 2000L, seed = 1L, zeta0 = 1.0,
   a0 = 1.0, b0 = 1.0, a1 = 2.0, b1 = 4.0

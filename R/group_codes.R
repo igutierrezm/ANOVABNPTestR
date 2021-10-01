@@ -8,6 +8,7 @@
 #'   \item x\eqn{i}: the level of the \eqn{i}th factor for that  group,
 #'   for each \eqn{i = 1, 2, \ldots}
 #' }
+#' @export
 group_codes <- function(fit) {
   fit$group_codes
 }

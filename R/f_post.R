@@ -7,6 +7,7 @@
 #'   \item y the value of the response variable.
 #'   \item the posterior predictive pdf evaluated at y, given the group.
 #' }
+#' @export
 f_post <- function(fit) {
   fit$f_post
 }

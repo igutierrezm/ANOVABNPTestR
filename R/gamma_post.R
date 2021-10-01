@@ -9,6 +9,7 @@
 #'   distribution of the reference group, for each \eqn{i = 2, 3, \ldots}
 #' }
 #' For more information about the meaning of each group, use \code{group_codes}.
+#' @export
 gamma_post <- function(fit) {
   fit$gamma_post
 }

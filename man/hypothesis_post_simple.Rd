@@ -2,7 +2,7 @@
 % Please edit documentation in R/hypothesis_post_simple.R
 \name{hypothesis_post_simple}
 \alias{hypothesis_post_simple}
-\title{Return the XXX summary statistic associated with each factor}
+\title{Return the XXX statistic associated with each factor}
 \usage{
 hypothesis_post_simple(fit)
 }
@@ -17,5 +17,5 @@ A tibble with the following variables:
 }
 }
 \description{
-Return the XXX summary statistic associated with each factor
+Return the XXX statistic associated with each factor
 }

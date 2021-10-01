@@ -6,6 +6,7 @@
 #'   \item var1: factor id.
 #'   \item prob: the XXX summary statistic.
 #' }
+#' @export
 hypothesis_post_simple <- function(fit) {
   fit$hypothesis_post_simple
 }

@@ -8,6 +8,7 @@
 #' @importFrom dplyr mutate filter left_join c_across
 #' @importFrom ggplot2 ggplot aes_string geom_line
 #' @importFrom rlang := .data
+#' @export
 predictive_plot_simple <- function(fit, d1) {
   var1 <- paste0("x", d1)
   group_codes(fit) |>

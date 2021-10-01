@@ -7,6 +7,7 @@
 #'   \item var2: the 2nd factor id.
 #'   \item prob: the YYY summary statistic.
 #' }
+#' @export
 hypothesis_post_interaction <- function(fit) {
   fit$hypothesis_post_interaction
 }

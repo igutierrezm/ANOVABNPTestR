@@ -2,7 +2,7 @@
 
 [![docs](https://img.shields.io/badge/docs-stable-blue.svg)](https://igutierrezm.github.io/ANOVABNPTestR/)
 
-Implements the Bayesian Nonparametric Factorial ANOVA model described in 
+An R package that implements the (BNP) Factorial ANOVA model described in 
 Gutiérrez et al. (2021). See the 
 [documentation](https://igutierrezm.github.io/ANOVABNPTestR/) 
 for details.
@@ -15,10 +15,10 @@ remotes::install_github("igutierrezm/ANOVABNPTestR")
 
 ## Dependencies
 
-`ANOVABNPTestR` requires Julia (v1.6.1+). If you still do not have Julia, you 
-can download it from [the oficial website](https://julialang.org/downloads/), 
+`ANOVABNPTestR` requires Julia v1.6.1+. You can download it from 
+[the oficial website](https://julialang.org/downloads/), 
 and then install it following these 
-[platform specific instruction](https://julialang.org/downloads/platform/).
+[instructions](https://julialang.org/downloads/platform/).
 
 ## Main functions
 

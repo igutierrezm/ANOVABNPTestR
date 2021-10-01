@@ -2,7 +2,7 @@
 % Please edit documentation in R/hypothesis_post_interaction.R
 \name{hypothesis_post_interaction}
 \alias{hypothesis_post_interaction}
-\title{Return the YYY summary statistic associated with each factor}
+\title{Return the YYY statistic associated with each factor}
 \usage{
 hypothesis_post_interaction(fit)
 }
@@ -18,5 +18,5 @@ A tibble with the following variables:
 }
 }
 \description{
-Return the YYY summary statistic associated with each factor
+Return the YYY statistic associated with each factor
 }

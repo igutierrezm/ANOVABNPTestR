@@ -18,6 +18,7 @@
 #' @return An object of class 'anova_bnp_model'.
 #' @importFrom dplyr as_tibble
 #' @importFrom JuliaConnectoR juliaImport
+#' @export
 anova_bnp_normal <- function(
   y, X, iter = 4000L, warmup = 2000L, seed = 1L, n = 50L, zeta0 = 1.0,
   a0 = 1.0, b0 = 1.0, v0 = 2.0, r0 = 1.0, u0 = 0.0, s0 = 1.0

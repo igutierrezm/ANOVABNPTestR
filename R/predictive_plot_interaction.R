@@ -9,6 +9,7 @@
 #' @importFrom dplyr mutate filter left_join c_across
 #' @importFrom ggplot2 ggplot aes_string geom_line
 #' @importFrom rlang := .data
+#' @export
 predictive_plot_interaction <- function(fit, d1, d2) {
   var1 <- paste0("x", d1)
   var2 <- paste0("x", d2)
