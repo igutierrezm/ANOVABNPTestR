@@ -17,7 +17,7 @@ remotes::install_github("igutierrezm/ANOVABNPTestR")
 
 ## Dependencies
 
-`ANOVABNPTestR` requires Julia v1.6.1+. You can download it 
+ANOVABNPTestR requires Julia v1.6.1+. You can download it 
 [here](https://julialang.org/downloads/), 
 and then install it following these 
 [instructions](https://julialang.org/downloads/platform/).
