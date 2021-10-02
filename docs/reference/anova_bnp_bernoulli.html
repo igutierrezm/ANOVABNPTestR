@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • ANOVABNPTestR</title>
+<title>Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel. — anova_bnp_bernoulli • ANOVABNPTestR</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,8 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel. — anova_bnp_bernoulli" />
+<meta property="og:description" content="Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel." />
 
 
 
@@ -58,7 +59,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -112,108 +113,80 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel.</h1>
+    
+    <div class="hidden name"><code>anova_bnp_bernoulli.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>anova_bnp_bernoulli</span><span class='op'>(</span>
+  <span class='va'>y</span>,
+  <span class='va'>X</span>,
+  iter <span class='op'>=</span> <span class='fl'>4000L</span>,
+  warmup <span class='op'>=</span> <span class='fl'>2000L</span>,
+  seed <span class='op'>=</span> <span class='fl'>1L</span>,
+  zeta0 <span class='op'>=</span> <span class='fl'>1</span>,
+  a0 <span class='op'>=</span> <span class='fl'>1</span>,
+  b0 <span class='op'>=</span> <span class='fl'>1</span>,
+  a1 <span class='op'>=</span> <span class='fl'>2</span>,
+  b1 <span class='op'>=</span> <span class='fl'>4</span>
+<span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="anova_bnp_bernoulli.html">anova_bnp_bernoulli()</a></code> </p>
-        </td>
-        <td><p>Fit a Bayesian nonparametric factorial ANOVA model with Bernoulli kernel.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="anova_bnp_normal.html">anova_bnp_normal()</a></code> </p>
-        </td>
-        <td><p>Fit a Bayesian nonparametric factorial ANOVA model with Gaussian kernel.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="anova_bnp_poisson.html">anova_bnp_poisson()</a></code> </p>
-        </td>
-        <td><p>Fit a Bayesian nonparametric factorial ANOVA model with Poisson kernel.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="example_01.html">example_01</a></code> </p>
-        </td>
-        <td><p>The 1st dataset used in the "Getting Started" vignette</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="f_post.html">f_post()</a></code> </p>
-        </td>
-        <td><p>Return the posterior predictive pdf</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gamma_post.html">gamma_post()</a></code> </p>
-        </td>
-        <td><p>Return the posterior probability of each hypothesis vector</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="group_codes.html">group_codes()</a></code> </p>
-        </td>
-        <td><p>Return the factor levels associated with each group</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="hypothesis_post_interaction.html">hypothesis_post_interaction()</a></code> </p>
-        </td>
-        <td><p>Return the YYY statistic associated with each factor</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="hypothesis_post_simple.html">hypothesis_post_simple()</a></code> </p>
-        </td>
-        <td><p>Return the XXX statistic associated with each factor</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="predictive_plot_interaction.html">predictive_plot_interaction()</a></code> </p>
-        </td>
-        <td><p>Plot the posterior predictive pdf (interactions)</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="predictive_plot_simple.html">predictive_plot_simple()</a></code> </p>
-        </td>
-        <td><p>Plot the posterior predictive pdf (simple effects)</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="setup.html">setup()</a></code> </p>
-        </td>
-        <td><p>Check Julia setup</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>y</th>
+      <td><p>An boolean response vector.</p></td>
+    </tr>
+    <tr>
+      <th>X</th>
+      <td><p>A design matrix (full of integer covariates).</p></td>
+    </tr>
+    <tr>
+      <th>iter</th>
+      <td><p>the total number of mcmc iterations (default 4000).</p></td>
+    </tr>
+    <tr>
+      <th>warmup</th>
+      <td><p>the number of warmup mcmc iterations (default 2000).</p></td>
+    </tr>
+    <tr>
+      <th>seed</th>
+      <td><p>the seed for random number generation (default 1L).</p></td>
+    </tr>
+    <tr>
+      <th>zeta0</th>
+      <td><p>the hyperparameter \(\zeta_0\) (default 1.0).</p></td>
+    </tr>
+    <tr>
+      <th>a0</th>
+      <td><p>the hyperparameter \(a_0\) (default 1.0).</p></td>
+    </tr>
+    <tr>
+      <th>b0</th>
+      <td><p>the hyperparameter \(b_0\) (default 1.0).</p></td>
+    </tr>
+    <tr>
+      <th>a1</th>
+      <td><p>the hyperparameter \(a_1\) (default 2.0).</p></td>
+    </tr>
+    <tr>
+      <th>b1</th>
+      <td><p>the hyperparameter \(b_1\) (default 4.0).</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>An object of class 'anova_bnp_model'.</p>
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

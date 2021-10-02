@@ -103,7 +103,7 @@
 <div id="fitting-the-model" class="section level3">
 <h3 class="hasAnchor">
 <a href="#fitting-the-model" class="anchor"></a>Fitting the model</h3>
-<p>First, we need to train the model. As our response takes values on the real line, we should use <code><a href="../reference/anova_bnp_normal.html">anova_bnp_normal()</a></code> (see <code><a href="../reference/anova_bnp_poisson.html">anova_bnp_poisson()</a></code> for counts and <code>anova_bnp_bernoulli()</code> for Boolean variables):</p>
+<p>First, we need to train the model. As our response takes values on the real line, we should use <code><a href="../reference/anova_bnp_normal.html">anova_bnp_normal()</a></code> (see <code><a href="../reference/anova_bnp_poisson.html">anova_bnp_poisson()</a></code> for counts and <code><a href="../reference/anova_bnp_bernoulli.html">anova_bnp_bernoulli()</a></code> for Boolean variables):</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">yvec</span> <span class="op">&lt;-</span> <span class="va">example_01</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
 <span class="va">Xmat</span> <span class="op">&lt;-</span> <span class="va">example_01</span><span class="op">[</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span> |&gt; <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="op">)</span>

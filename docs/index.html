@@ -75,7 +75,7 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#anovabnptestr" class="anchor"></a>ANOVABNPTestR</h1></div>
 
-<p>An R package that implements the (BNP) Factorial ANOVA model described in Gutiérrez et al. (2021). See the <a href="https://igutierrezm.github.io/ANOVABNPTestR/">documentation</a> for details.</p>
+<p>An R package that implements the (BNP) Factorial ANOVA model described in Gutiérrez et al. (2021). See the <a href="https://igutierrezm.github.io/ANOVABNPTestR/index.html">documentation</a> for details and the <a href="https://igutierrezm.github.io/ANOVABNPTestR/articles/getting_started.html">getting started</a> vignette for a working example.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -85,23 +85,7 @@
 <div id="dependencies" class="section level2">
 <h2 class="hasAnchor">
 <a href="#dependencies" class="anchor"></a>Dependencies</h2>
-<p><code>ANOVABNPTestR</code> requires Julia v1.6.1+. You can download it from <a href="https://julialang.org/downloads/">the oficial website</a>, and then install it following these <a href="https://julialang.org/downloads/platform/">instructions</a>.</p>
-</div>
-<div id="main-functions" class="section level2">
-<h2 class="hasAnchor">
-<a href="#main-functions" class="anchor"></a>Main functions</h2>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/setup.html">setup</a></span><span class="op">(</span><span class="op">)</span>                                  <span class="co"># check the julia dependencies</span>
-<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/anova_bnp_normal.html">anova_bnp_normal</a></span><span class="op">(</span><span class="va">y</span>, <span class="va">X</span>, <span class="va">...</span><span class="op">)</span>       <span class="co"># fit the model (normal kernel)</span>
-<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/anova_bnp_poisson.html">anova_bnp_poisson</a></span><span class="op">(</span><span class="va">y</span>, <span class="va">X</span>, <span class="va">...</span><span class="op">)</span>      <span class="co"># fit the model (poisson kernel)</span>
-<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu">anova_bnp_bernoulli</span><span class="op">(</span><span class="va">y</span>, <span class="va">X</span>, <span class="va">...</span><span class="op">)</span>    <span class="co"># fit the model (bernoulli kernel)</span>
-<span class="fu"><a href="reference/f_post.html">f_post</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>                              <span class="co"># return p(y0 | x, y)</span>
-<span class="fu"><a href="reference/gamma_post.html">gamma_post</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>                          <span class="co"># return p(gamma | y)</span>
-<span class="fu"><a href="reference/group_codes.html">group_codes</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>                         <span class="co"># return the meaning of each group</span>
-<span class="fu"><a href="reference/predictive_plot_simple.html">predictive_plot_simple</a></span><span class="op">(</span><span class="va">fit</span>, <span class="va">d1</span><span class="op">)</span>          <span class="co"># plot p(y0, x, y) (simple effects only)</span>
-<span class="fu"><a href="reference/predictive_plot_interaction.html">predictive_plot_interaction</a></span><span class="op">(</span><span class="va">fit</span>, <span class="va">d1</span>, <span class="va">d2</span><span class="op">)</span> <span class="co"># plot p(y0, x, y) (interactions only)</span>
-<span class="fu"><a href="reference/hypothesis_post_simple.html">hypothesis_post_simple</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>              <span class="co"># return the XXX statistic</span>
-<span class="fu"><a href="reference/hypothesis_post_interaction.html">hypothesis_post_interaction</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>         <span class="co"># return the YYY statistic</span></code></pre></div>
+<p>ANOVABNPTestR requires Julia v1.6.1+. You can download it <a href="https://julialang.org/downloads/">here</a>, and then install it following these <a href="https://julialang.org/downloads/platform/">instructions</a>.</p>
 </div>
 </div>
   </div>
@@ -124,7 +108,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://igutierrezm.github.io/ANOVABNPTestR/"><img src="https://img.shields.io/badge/docs-stable-blue.svg" alt="docs"></a></li>
+<li><a href="https://igutierrezm.github.io/ANOVABNPTestR/index.html"><img src="https://img.shields.io/badge/docs-stable-blue.svg" alt="docs"></a></li>
 </ul>
 </div>
 </div>
