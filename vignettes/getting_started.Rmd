@@ -15,9 +15,10 @@ knitr::opts_chunk$set(
 ```
 
 
-```{r setup}
-library(ANOVABNPTestR)
+```{r setup, eval = FALSE}
 library(ggplot2)
+library(ANOVABNPTestR)
+ANOVABNPTestR::setup()
 ```
 
 To explore the basic capabilities of `ANOVABNPTestR`, we'll use the dataset 

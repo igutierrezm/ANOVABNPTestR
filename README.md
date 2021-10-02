@@ -11,9 +11,21 @@ vignette for a working example.
 
 ## Installation
 
+You can install ANOVABNPTestR from source as follows:
+
 ```r
 remotes::install_github("igutierrezm/ANOVABNPTestR")
 ```
+
+This will install the R package ANOVABNPTestR, but not the Julia packages on
+which it depends. In order to install these Julia packages, run
+Julia packages dependencies as follows:
+
+```r
+ANOVABNPTestR::setup()
+```
+
+You only need to do this once.
 
 ## Dependencies
 
