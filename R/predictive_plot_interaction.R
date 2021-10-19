@@ -11,17 +11,26 @@
 #' @importFrom rlang := .data
 #' @export
 predictive_plot_interaction <- function(fit, d1, d2) {
+  # Get the relevant groups
   var1 <- paste0("x", d1)
   var2 <- paste0("x", d2)
-  group_codes(fit) |>
+  target_groups <-
+    group_codes(fit) |>
+    mutate(across(-c("group"), ~ dense_rank(.x))) |>
     mutate(x0 = 1) |>
+    rowwise() |>
     mutate(
-      touse = pmax(c_across(-c("group", var1, var2))),
+      touse = max(c_across(-c("group", var1, var2))),
       touse = .data$touse == 1,
       touse = .data$touse & (.data[[var1]] == 1 | .data[[var2]] != 1),
       touse = .data$touse & (.data[[var1]] != 1 | .data[[var2]] == 1)
     ) |>
     filter(.data$touse) |>
+    pull(group)
+
+  # Plot the posterior predictive pdf
+  group_codes(fit) |>
+    filter(group %in% target_groups) |>
     left_join(f_post(fit)) |>
     mutate(
       {{ var1 }} := factor(.data[[var1]]),
