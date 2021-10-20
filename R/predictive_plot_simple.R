@@ -5,7 +5,7 @@
 #' @param fit An object of class anova_bnp_model.
 #' @param d1 The factor id.
 #' @return A ggplot2 plot.
-#' @importFrom dplyr mutate filter left_join c_across
+#' @importFrom dplyr mutate filter left_join c_across pull rowwise
 #' @importFrom ggplot2 ggplot aes_string geom_line
 #' @importFrom rlang := .data
 #' @export

@@ -6,7 +6,7 @@
 #' @param d1 The 1st factor id.
 #' @param d2 The 2nd factor id.
 #' @return A ggplot2 plot.
-#' @importFrom dplyr mutate filter left_join c_across
+#' @importFrom dplyr mutate filter left_join c_across pull rowwise
 #' @importFrom ggplot2 ggplot aes_string geom_line
 #' @importFrom rlang := .data
 #' @export
