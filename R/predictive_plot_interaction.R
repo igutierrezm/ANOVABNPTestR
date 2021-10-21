@@ -6,7 +6,7 @@
 #' @param d1 The 1st factor id.
 #' @param d2 The 2nd factor id.
 #' @return A ggplot2 plot.
-#' @importFrom dplyr mutate filter left_join c_across pull rowwise
+#' @importFrom dplyr mutate filter left_join c_across across pull rowwise
 #' @importFrom ggplot2 ggplot aes_string geom_line
 #' @importFrom rlang := .data
 #' @export
@@ -26,11 +26,11 @@ predictive_plot_interaction <- function(fit, d1, d2) {
       touse = .data$touse & (.data[[var1]] != 1 | .data[[var2]] == 1)
     ) |>
     filter(.data$touse) |>
-    pull(group)
+    pull("group")
 
   # Plot the posterior predictive pdf
   group_codes(fit) |>
-    filter(group %in% target_groups) |>
+    filter(.data$group %in% target_groups) |>
     left_join(f_post(fit)) |>
     mutate(
       {{ var1 }} := factor(.data[[var1]]),
