@@ -14,11 +14,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-
-```{r setup, eval = FALSE}
+```{r setup, echo = FALSE}
 library(ggplot2)
 library(ANOVABNPTestR)
-ANOVABNPTestR::setup()
+```
+
+
+```{r printed-setup, eval = FALSE}
+library(ggplot2)
+library(ANOVABNPTestR) 
+# remember: you need to ANOVABNPTestR::setup() at least one time
 ```
 
 To explore the basic capabilities of `ANOVABNPTestR`, we'll use the dataset 
@@ -29,7 +34,7 @@ response (`y`) and 2 factors (`x1` and `x2`), where the combination
 First, let us plot a boxplot of `y` for each combination of `x1` and `x2`:
 
 ```{r}
-ggplot(example_01, aes(y = y)) + 
+ggplot(ANOVABNPTestR::example_01, aes(y = y)) + 
   geom_boxplot() +
   facet_wrap(
     nrow = 1,
@@ -46,66 +51,66 @@ strong interaction effect. However, without a formal test, we cannot be sure.
 ANOVABNPTestR aims to provide tools for testing the existence of simple and 
 interaction effects, using a flexible Bayesian model.
 
-### Fitting the model
+<!-- ### Fitting the model -->
 
-First, we need to train the model. As our response takes values on the real 
-line, we should use `anova_bnp_normal()` (see `anova_bnp_poisson()` for 
-counts and `anova_bnp_bernoulli()` for Boolean variables):
-```{r, message = FALSE}
-yvec <- example_01[[1]]
-Xmat <- example_01[, 2:3] |> as.matrix()
-fit <- anova_bnp_normal(yvec, Xmat)
-```
+<!-- First, we need to train the model. As our response takes values on the real  -->
+<!-- line, we should use `anova_bnp_normal()` (see `anova_bnp_poisson()` for  -->
+<!-- counts and `anova_bnp_bernoulli()` for Boolean variables): -->
+<!-- ```{r, message = FALSE} -->
+<!-- yvec <- example_01[[1]] -->
+<!-- Xmat <- example_01[, 2:3] |> as.matrix() -->
+<!-- fit <- anova_bnp_normal(yvec, Xmat) -->
+<!-- ``` -->
 
-### Testing for simple effects
+<!-- ### Testing for simple effects -->
 
-Once the model is trained, we can test for simple effects using 
-`hypothesis_post_simple()`:
-```{r}
-hypothesis_post_simple(fit)
-```
-In this tibble, `var1` specifies the factor into consideration, and `prob` 
-is the posterior probability of having a simple effect for that factor. As 
-`prob` is always low, there is little support for simple effects.
+<!-- Once the model is trained, we can test for simple effects using  -->
+<!-- `hypothesis_post_simple()`: -->
+<!-- ```{r} -->
+<!-- hypothesis_post_simple(fit) -->
+<!-- ``` -->
+<!-- In this tibble, `var1` specifies the factor into consideration, and `prob`  -->
+<!-- is the posterior probability of having a simple effect for that factor. As  -->
+<!-- `prob` is always low, there is little support for simple effects. -->
 
-### Testing for interaction effects
+<!-- ### Testing for interaction effects -->
 
-In a similar, we can test for interaction effects using 
-`hypothesis_post_interaction()`:
-```{r}
-hypothesis_post_interaction(fit)
-```
-In this tibble, `var1` and `var2` specify the interaction into consideration, 
-and `prob` is the posterior probability of having a simple effect for that
-interaction. As `prob` nearly 1, there is a great support for an 
-interaction effect.
+<!-- In a similar, we can test for interaction effects using  -->
+<!-- `hypothesis_post_interaction()`: -->
+<!-- ```{r} -->
+<!-- hypothesis_post_interaction(fit) -->
+<!-- ``` -->
+<!-- In this tibble, `var1` and `var2` specify the interaction into consideration,  -->
+<!-- and `prob` is the posterior probability of having a simple effect for that -->
+<!-- interaction. As `prob` nearly 1, there is a great support for an  -->
+<!-- interaction effect. -->
 
-### Plotting simple effects
+<!-- ### Plotting simple effects -->
 
-In addition to the main tests functions, ANOVABNPTestR can also plot the 
-posterior predictive density (ppd) of the response under some common scenarios. 
-For example, the function `predictive_plot_simple()` displays the ppd for each 
-level of a particular factor, while setting the other factors at their 
-reference level.
+<!-- In addition to the main tests functions, ANOVABNPTestR can also plot the  -->
+<!-- posterior predictive density (ppd) of the response under some common scenarios.  -->
+<!-- For example, the function `predictive_plot_simple()` displays the ppd for each  -->
+<!-- level of a particular factor, while setting the other factors at their  -->
+<!-- reference level. -->
 
-```{r, message = FALSE}
-predictive_plot_simple(fit, 1) +
-  theme_classic()
-```
+<!-- ```{r, message = FALSE} -->
+<!-- predictive_plot_simple(fit, 1) + -->
+<!--   theme_classic() -->
+<!-- ``` -->
 
-As you can see, there is nearly no difference between the group distributions, 
-in agreement with the output of our tests.
+<!-- As you can see, there is nearly no difference between the group distributions,  -->
+<!-- in agreement with the output of our tests. -->
 
-### Plotting interaction effects
+<!-- ### Plotting interaction effects -->
 
-In a similar way, the function `predictive_plot_interaction()` displays the ppd 
-for each level of a particular interaction, while setting the other factors at 
-their reference level.
+<!-- In a similar way, the function `predictive_plot_interaction()` displays the ppd  -->
+<!-- for each level of a particular interaction, while setting the other factors at  -->
+<!-- their reference level. -->
 
-```{r, message = FALSE}
-predictive_plot_interaction(fit, 1, 2) +
-  theme_classic()
-```
+<!-- ```{r, message = FALSE} -->
+<!-- predictive_plot_interaction(fit, 1, 2) + -->
+<!--   theme_classic() -->
+<!-- ``` -->
 
-As you can see, there is marked difference between the group distributions, 
-again in agreement with the output of our tests.
+<!-- As you can see, there is marked difference between the group distributions,  -->
+<!-- again in agreement with the output of our tests. -->
