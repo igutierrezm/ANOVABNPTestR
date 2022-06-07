@@ -21,12 +21,13 @@
 #' @export
 anova_bnp_normal <- function(
   y, X, iter = 4000L, warmup = 2000L, seed = 1L, n = 50L, zeta0 = 1.0,
-  a0 = 1.0, b0 = 1.0, v0 = 2.0, r0 = 1.0, u0 = 0.0, s0 = 1.0
+  a0 = 1.0, b0 = 1.0, v0 = 2.0, r0 = 1.0, u0 = 0.0, s0 = 1.0,
+  lb = mean(y) - 0.5 * sd(y), ub = mean(y) + 0.5 * sd(y)
 ) {
   ANOVADDPTest <- juliaImport("ANOVADDPTest")
   fit <- ANOVADDPTest$anova_bnp_normal(
     y, X, iter = iter, warmup = warmup, seed = seed, n = n, zeta0 = zeta0,
-    a0 = a0, b0 = b0, v0 = v0, r0 = r0, u0 = u0, s0 = s0
+    a0 = a0, b0 = b0, v0 = v0, r0 = r0, u0 = u0, s0 = s0, lb = lb, ub = ub
   )
   out <-
     list(

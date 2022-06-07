@@ -16,12 +16,12 @@
 #' @export
 anova_bnp_bernoulli <- function(
   y, X, iter = 4000L, warmup = 2000L, seed = 1L, zeta0 = 1.0,
-  a0 = 1.0, b0 = 1.0, a1 = 2.0, b1 = 4.0
+  a0 = 1.0, b0 = 1.0, a1 = 2.0, b1 = 4.0, lb = min(y), ub = max(y)
 ) {
   ANOVADDPTest <- juliaImport("ANOVADDPTest")
   fit <- ANOVADDPTest$anova_bnp_bernoulli(
     y, X, iter = iter, warmup = warmup, seed = seed, zeta0 = zeta0,
-    a0 = a0, b0 = b0, a1 = a1, b1 = b1
+    a0 = a0, b0 = b0, a1 = a1, b1 = b1, lb = lb, ub = ub
   )
   out <-
     list(
