@@ -89,57 +89,51 @@
 <p><img src="getting_started_files/figure-html/unnamed-chunk-2-1.png" width="700"></p>
 <p>This plot suggests weak simple effects (relative to the reference group), but a strong interaction effect. However, without a formal test, we cannot be sure.</p>
 <p>ANOVABNPTestR aims to provide tools for testing the existence of simple and interaction effects, using a flexible Bayesian model.</p>
-<!-- ### Fitting the model -->
-<!-- First, we need to train the model. As our response takes values on the real  -->
-<!-- line, we should use `anova_bnp_normal()` (see `anova_bnp_poisson()` for  -->
-<!-- counts and `anova_bnp_bernoulli()` for Boolean variables): -->
-<!-- ```{r, message = FALSE} -->
-<!-- yvec <- example_01[[1]] -->
-<!-- Xmat <- example_01[, 2:3] |> as.matrix() -->
-<!-- fit <- anova_bnp_normal(yvec, Xmat) -->
-<!-- ``` -->
-<!-- ### Testing for simple effects -->
-<!-- Once the model is trained, we can test for simple effects using  -->
-<!-- `hypothesis_post_simple()`: -->
-<!-- ```{r} -->
-<!-- hypothesis_post_simple(fit) -->
-<!-- ``` -->
-<!-- In this tibble, `var1` specifies the factor into consideration, and `prob`  -->
-<!-- is the posterior probability of having a simple effect for that factor. As  -->
-<!-- `prob` is always low, there is little support for simple effects. -->
-<!-- ### Testing for interaction effects -->
-<!-- In a similar, we can test for interaction effects using  -->
-<!-- `hypothesis_post_interaction()`: -->
-<!-- ```{r} -->
-<!-- hypothesis_post_interaction(fit) -->
-<!-- ``` -->
-<!-- In this tibble, `var1` and `var2` specify the interaction into consideration,  -->
-<!-- and `prob` is the posterior probability of having a simple effect for that -->
-<!-- interaction. As `prob` nearly 1, there is a great support for an  -->
-<!-- interaction effect. -->
-<!-- ### Plotting simple effects -->
-<!-- In addition to the main tests functions, ANOVABNPTestR can also plot the  -->
-<!-- posterior predictive density (ppd) of the response under some common scenarios.  -->
-<!-- For example, the function `predictive_plot_simple()` displays the ppd for each  -->
-<!-- level of a particular factor, while setting the other factors at their  -->
-<!-- reference level. -->
-<!-- ```{r, message = FALSE} -->
-<!-- predictive_plot_simple(fit, 1) + -->
-<!--   theme_classic() -->
-<!-- ``` -->
-<!-- As you can see, there is nearly no difference between the group distributions,  -->
-<!-- in agreement with the output of our tests. -->
-<!-- ### Plotting interaction effects -->
-<!-- In a similar way, the function `predictive_plot_interaction()` displays the ppd  -->
-<!-- for each level of a particular interaction, while setting the other factors at  -->
-<!-- their reference level. -->
-<!-- ```{r, message = FALSE} -->
-<!-- predictive_plot_interaction(fit, 1, 2) + -->
-<!--   theme_classic() -->
-<!-- ``` -->
-<!-- As you can see, there is marked difference between the group distributions,  -->
-<!-- again in agreement with the output of our tests. -->
-  </main>
+<div class="section level3">
+<h3 id="fitting-the-model">Fitting the model<a class="anchor" aria-label="anchor" href="#fitting-the-model"></a>
+</h3>
+<p>First, we need to train the model. As our response takes values on the real line, we should use <code><a href="../reference/anova_bnp_normal.html">anova_bnp_normal()</a></code> (see <code><a href="../reference/anova_bnp_poisson.html">anova_bnp_poisson()</a></code> for counts and <code><a href="../reference/anova_bnp_bernoulli.html">anova_bnp_bernoulli()</a></code> for Boolean variables):</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">yvec</span> <span class="op">&lt;-</span> <span class="va">example_01</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>
+<span class="va">Xmat</span> <span class="op">&lt;-</span> <span class="va">example_01</span><span class="op">[</span>, <span class="fl">2</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span> |&gt; <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">as.matrix</a></span><span class="op">(</span><span class="op">)</span>
+<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/anova_bnp_normal.html">anova_bnp_normal</a></span><span class="op">(</span><span class="va">yvec</span>, <span class="va">Xmat</span><span class="op">)</span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="testing-for-simple-effects">Testing for simple effects<a class="anchor" aria-label="anchor" href="#testing-for-simple-effects"></a>
+</h3>
+<p>Once the model is trained, we can test for simple effects using <code><a href="../reference/hypothesis_post_simple.html">hypothesis_post_simple()</a></code>:</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/hypothesis_post_simple.html">hypothesis_post_simple</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></code></pre></div>
+<p>In this tibble, <code>var1</code> specifies the factor into consideration, and <code>prob</code> is the posterior probability of having a simple effect for that factor. As <code>prob</code> is always low, there is little support for simple effects.</p>
+</div>
+<div class="section level3">
+<h3 id="testing-for-interaction-effects">Testing for interaction effects<a class="anchor" aria-label="anchor" href="#testing-for-interaction-effects"></a>
+</h3>
+<p>In a similar, we can test for interaction effects using <code><a href="../reference/hypothesis_post_interaction.html">hypothesis_post_interaction()</a></code>:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/hypothesis_post_interaction.html">hypothesis_post_interaction</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></code></pre></div>
+<p>In this tibble, <code>var1</code> and <code>var2</code> specify the interaction into consideration, and <code>prob</code> is the posterior probability of having a simple effect for that interaction. As <code>prob</code> nearly 1, there is a great support for an interaction effect.</p>
+</div>
+<div class="section level3">
+<h3 id="plotting-simple-effects">Plotting simple effects<a class="anchor" aria-label="anchor" href="#plotting-simple-effects"></a>
+</h3>
+<p>In addition to the main tests functions, ANOVABNPTestR can also plot the posterior predictive density (ppd) of the response under some common scenarios. For example, the function <code><a href="../reference/predictive_plot_simple.html">predictive_plot_simple()</a></code> displays the ppd for each level of a particular factor, while setting the other factors at their reference level.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/predictive_plot_simple.html">predictive_plot_simple</a></span><span class="op">(</span><span class="va">fit</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_classic</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>As you can see, there is nearly no difference between the group distributions, in agreement with the output of our tests.</p>
+</div>
+<div class="section level3">
+<h3 id="plotting-interaction-effects">Plotting interaction effects<a class="anchor" aria-label="anchor" href="#plotting-interaction-effects"></a>
+</h3>
+<p>In a similar way, the function <code><a href="../reference/predictive_plot_interaction.html">predictive_plot_interaction()</a></code> displays the ppd for each level of a particular interaction, while setting the other factors at their reference level.</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/predictive_plot_interaction.html">predictive_plot_interaction</a></span><span class="op">(</span><span class="va">fit</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_classic</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>As you can see, there is marked difference between the group distributions, again in agreement with the output of our tests.</p>
+</div>
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
