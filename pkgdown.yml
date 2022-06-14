@@ -1,0 +1,10 @@
+pandoc: 2.14.2
+pkgdown: 2.0.4
+pkgdown_sha: ~
+articles:
+  getting_started: getting_started.html
+last_built: 2022-06-14T04:23Z
+urls:
+  reference: https://igutierrezm.github.io/ANOVABNPTestR/reference
+  article: https://igutierrezm.github.io/ANOVABNPTestR/articles
+
