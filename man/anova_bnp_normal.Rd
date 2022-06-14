@@ -12,18 +12,20 @@ anova_bnp_normal(
   seed = 1L,
   n = 50L,
   rho = 1,
-  a0 = 1,
+  a = 1,
+  b = 1,
+  a0 = 2,
+  lambda0 = 1,
+  mu0 = 0,
   b0 = 1,
-  v0 = 2,
-  r0 = 1,
-  u0 = 0,
-  s0 = 1
+  lb = mean(y) - 3 * sd(y),
+  ub = mean(y) + 3 * sd(y)
 )
 }
 \arguments{
-\item{y}{A continuous response vector.}
+\item{y}{a continuous response vector.}
 
-\item{X}{A design matrix (full of integer covariates).}
+\item{X}{a design matrix (full of integer covariates).}
 
 \item{iter}{the total number of mcmc iterations (default 4000).}
 
@@ -32,22 +34,26 @@ anova_bnp_normal(
 \item{seed}{the seed for random number generation (default 1L).}
 
 \item{n}{the number of points y0 for computing p(y0 | y) (default 50L).
-The final grid is conformed by n equispaced point from
-\code{min(y) - sd(y) / 2} to \code{max(y) -  sd(y) / 2}}
+The final grid is conformed by n equispaced points from \code{lb} to \code{ub}, see
+the arguments \code{lb} and \code{ub}}
 
 \item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
 
-\item{a0}{the hyperparameter \eqn{a_0} (default 1.0).}
+\item{a}{the hyperparameter \eqn{a} (default 1.0).}
+
+\item{b}{the hyperparameter \eqn{b} (default 1.0).}
+
+\item{a0}{the hyperparameter \eqn{a_0} (default 2.0).}
+
+\item{lambda0}{the hyperparameter \eqn{\lambda_0} (default 1.0).}
+
+\item{mu0}{the hyperparameter \eqn{\mu_0} (default 0.0).}
 
 \item{b0}{the hyperparameter \eqn{b_0} (default 1.0).}
 
-\item{v0}{the hyperparameter \eqn{v_0} (default 2.0).}
+\item{lb}{the lower bound of the prediction grid, default: \code{mean(y) - 3.0 * sd(y)}}
 
-\item{r0}{the hyperparameter \eqn{r_0} (default 1.0).}
-
-\item{u0}{the hyperparameter \eqn{u_0} (default 0.0).}
-
-\item{s0}{the hyperparameter \eqn{s_0} (default 1.0).}
+\item{ub}{the upper bound of the prediction grid, default: \code{mean(y) + 3.0 * sd(y)}}
 }
 \value{
 An object of class 'anova_bnp_model'.

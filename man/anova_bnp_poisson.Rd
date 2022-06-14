@@ -11,10 +11,12 @@ anova_bnp_poisson(
   warmup = 2000L,
   seed = 1L,
   rho = 1,
-  a0 = 1,
-  b0 = 1,
+  a = 1,
+  b = 1,
   a1 = 2,
-  b1 = 4
+  b1 = 4,
+  lb = min(y),
+  ub = max(y)
 )
 }
 \arguments{
@@ -30,9 +32,9 @@ anova_bnp_poisson(
 
 \item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
 
-\item{a0}{the hyperparameter \eqn{a_0} (default 1.0).}
+\item{a}{the hyperparameter \eqn{a} (default 1.0).}
 
-\item{b0}{the hyperparameter \eqn{b_0} (default 1.0).}
+\item{b}{the hyperparameter \eqn{b} (default 1.0).}
 
 \item{a1}{the hyperparameter \eqn{a_1} (default 2.0).}
 
