@@ -56,7 +56,7 @@ interaction effects, using a flexible Bayesian model.
 First, we need to train the model. As our response takes values on the real
 line, we should use `anova_bnp_normal()` (see `anova_bnp_poisson()` for
 counts and `anova_bnp_bernoulli()` for Boolean variables):
-```{r, message = FALSE}
+```{r, message = FALSE, eval = FALSE}
 yvec <- example_01[[1]]
 Xmat <- example_01[, 2:3] |> as.matrix()
 fit <- anova_bnp_normal(yvec, Xmat)
@@ -66,7 +66,7 @@ fit <- anova_bnp_normal(yvec, Xmat)
 
 Once the model is trained, we can test for simple effects using
 `hypothesis_post_simple()`:
-```{r}
+```{r, eval = FALSE}
 hypothesis_post_simple(fit)
 ```
 In this tibble, `var1` specifies the factor into consideration, and `prob`
@@ -77,7 +77,7 @@ is the posterior probability of having a simple effect for that factor. As
 
 In a similar, we can test for interaction effects using
 `hypothesis_post_interaction()`:
-```{r}
+```{r, eval = FALSE}
 hypothesis_post_interaction(fit)
 ```
 In this tibble, `var1` and `var2` specify the interaction into consideration,
@@ -93,7 +93,7 @@ For example, the function `predictive_plot_simple()` displays the ppd for each
 level of a particular factor, while setting the other factors at their
 reference level.
 
-```{r, message = FALSE}
+```{r, message = FALSE, eval = FALSE}
 predictive_plot_simple(fit, 1) +
   theme_classic()
 ```
@@ -107,7 +107,7 @@ In a similar way, the function `predictive_plot_interaction()` displays the ppd
 for each level of a particular interaction, while setting the other factors at
 their reference level.
 
-```{r, message = FALSE}
+```{r, message = FALSE, eval = FALSE}
 predictive_plot_interaction(fit, 1, 2) +
   theme_classic()
 ```
