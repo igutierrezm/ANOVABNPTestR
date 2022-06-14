@@ -11,7 +11,7 @@ anova_bnp_normal(
   warmup = 2000L,
   seed = 1L,
   n = 50L,
-  zeta0 = 1,
+  rho = 1,
   a0 = 1,
   b0 = 1,
   v0 = 2,
@@ -35,7 +35,7 @@ anova_bnp_normal(
 The final grid is conformed by n equispaced point from
 \code{min(y) - sd(y) / 2} to \code{max(y) -  sd(y) / 2}}
 
-\item{zeta0}{the hyperparameter \eqn{\zeta_0} (default 1.0).}
+\item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
 
 \item{a0}{the hyperparameter \eqn{a_0} (default 1.0).}
 

@@ -8,7 +8,7 @@
 #' @param n the number of points y0 for computing p(y0 | y) (default 50L).
 #' The final grid is conformed by n equispaced point from
 #' \code{min(y) - sd(y) / 2} to \code{max(y) -  sd(y) / 2}
-#' @param zeta0 the hyperparameter \eqn{\zeta_0} (default 1.0).
+#' @param rho the hyperparameter \eqn{\rho} (default 1.0).
 #' @param a0 the hyperparameter \eqn{a_0} (default 1.0).
 #' @param b0 the hyperparameter \eqn{b_0} (default 1.0).
 #' @param v0 the hyperparameter \eqn{v_0} (default 2.0).
@@ -20,13 +20,13 @@
 #' @importFrom JuliaConnectoR juliaImport
 #' @export
 anova_bnp_normal <- function(
-  y, X, iter = 4000L, warmup = 2000L, seed = 1L, n = 50L, zeta0 = 1.0,
+  y, X, iter = 4000L, warmup = 2000L, seed = 1L, n = 50L, rho = 1.0,
   a0 = 1.0, b0 = 1.0, v0 = 2.0, r0 = 1.0, u0 = 0.0, s0 = 1.0,
   lb = mean(y) - 0.5 * sd(y), ub = mean(y) + 0.5 * sd(y)
 ) {
   ANOVADDPTest <- juliaImport("ANOVADDPTest")
   fit <- ANOVADDPTest$anova_bnp_normal(
-    y, X, iter = iter, warmup = warmup, seed = seed, n = n, zeta0 = zeta0,
+    y, X, iter = iter, warmup = warmup, seed = seed, n = n, rho = rho,
     a0 = a0, b0 = b0, v0 = v0, r0 = r0, u0 = u0, s0 = s0, lb = lb, ub = ub
   )
   out <-

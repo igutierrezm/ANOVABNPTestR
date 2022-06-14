@@ -5,7 +5,7 @@
 #' @param iter the total number of mcmc iterations (default 4000).
 #' @param warmup the number of warmup mcmc iterations (default 2000).
 #' @param seed the seed for random number generation (default 1L).
-#' @param zeta0 the hyperparameter \eqn{\zeta_0} (default 1.0).
+#' @param rho the hyperparameter \eqn{\rho} (default 1.0).
 #' @param a0 the hyperparameter \eqn{a_0} (default 1.0).
 #' @param b0 the hyperparameter \eqn{b_0} (default 1.0).
 #' @param a1 the hyperparameter \eqn{a_1} (default 2.0).
@@ -15,12 +15,12 @@
 #' @importFrom JuliaConnectoR juliaImport
 #' @export
 anova_bnp_bernoulli <- function(
-  y, X, iter = 4000L, warmup = 2000L, seed = 1L, zeta0 = 1.0,
+  y, X, iter = 4000L, warmup = 2000L, seed = 1L, rho = 1.0,
   a0 = 1.0, b0 = 1.0, a1 = 2.0, b1 = 4.0, lb = min(y), ub = max(y)
 ) {
   ANOVADDPTest <- juliaImport("ANOVADDPTest")
   fit <- ANOVADDPTest$anova_bnp_bernoulli(
-    y, X, iter = iter, warmup = warmup, seed = seed, zeta0 = zeta0,
+    y, X, iter = iter, warmup = warmup, seed = seed, rho = rho,
     a0 = a0, b0 = b0, a1 = a1, b1 = b1, lb = lb, ub = ub
   )
   out <-

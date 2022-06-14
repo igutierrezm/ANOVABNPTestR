@@ -10,7 +10,7 @@ anova_bnp_bernoulli(
   iter = 4000L,
   warmup = 2000L,
   seed = 1L,
-  zeta0 = 1,
+  rho = 1,
   a0 = 1,
   b0 = 1,
   a1 = 2,
@@ -28,7 +28,7 @@ anova_bnp_bernoulli(
 
 \item{seed}{the seed for random number generation (default 1L).}
 
-\item{zeta0}{the hyperparameter \eqn{\zeta_0} (default 1.0).}
+\item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
 
 \item{a0}{the hyperparameter \eqn{a_0} (default 1.0).}
 
