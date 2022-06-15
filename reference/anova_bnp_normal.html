@@ -63,7 +63,8 @@
   mu0 <span class="op">=</span> <span class="fl">0</span>,
   b0 <span class="op">=</span> <span class="fl">1</span>,
   lb <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">-</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,
-  ub <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>
+  ub <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">3</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span>,
+  standardize_y <span class="op">=</span> <span class="cn">FALSE</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -129,6 +130,11 @@ the arguments <code>lb</code> and <code>ub</code></p></dd>
 
 <dt>ub</dt>
 <dd><p>the upper bound of the prediction grid, default: <code>mean(y) + 3.0 * sd(y)</code></p></dd>
+
+
+<dt>standardize_y</dt>
+<dd><p>Select <code>TRUE</code> to internally standardize the data,
+fit the model, and present the results in the original scale</p></dd>
 
 </dl></div>
     <div class="section level2">

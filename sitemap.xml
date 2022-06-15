@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/404.html</loc>
+    <loc>/404.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/LICENSE-text.html</loc>
+    <loc>/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/LICENSE.html</loc>
+    <loc>/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/articles/getting_started.html</loc>
+    <loc>/articles/getting_started.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/articles/index.html</loc>
+    <loc>/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/authors.html</loc>
+    <loc>/authors.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/index.html</loc>
+    <loc>/index.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/anova_bnp_bernoulli.html</loc>
+    <loc>/reference/anova_bnp_bernoulli.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/anova_bnp_normal.html</loc>
+    <loc>/reference/anova_bnp_normal.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/anova_bnp_poisson.html</loc>
+    <loc>/reference/anova_bnp_poisson.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/example_01.html</loc>
+    <loc>/reference/example_01.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/f_post.html</loc>
+    <loc>/reference/f_post.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/gamma_post.html</loc>
+    <loc>/reference/gamma_post.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/group_codes.html</loc>
+    <loc>/reference/group_codes.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/hypothesis_post_interaction.html</loc>
+    <loc>/reference/hypothesis_post_interaction.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/hypothesis_post_simple.html</loc>
+    <loc>/reference/hypothesis_post_simple.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/index.html</loc>
+    <loc>/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/predictive_plot_interaction.html</loc>
+    <loc>/reference/predictive_plot_interaction.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/predictive_plot_simple.html</loc>
+    <loc>/reference/predictive_plot_simple.html</loc>
   </url>
   <url>
-    <loc>https://igutierrezm.github.io/ANOVABNPTestR/reference/setup.html</loc>
+    <loc>/reference/setup.html</loc>
   </url>
 </urlset>
