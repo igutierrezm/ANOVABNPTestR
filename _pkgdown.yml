@@ -1,5 +1,4 @@
 url: https://igutierrezm.github.io/ANOVABNPTestR/
 template:
   bootstrap: 5
-  params:
-    bootswatch: cosmo
+
