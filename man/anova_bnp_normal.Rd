@@ -19,7 +19,8 @@ anova_bnp_normal(
   mu0 = 0,
   b0 = 1,
   lb = mean(y) - 3 * sd(y),
-  ub = mean(y) + 3 * sd(y)
+  ub = mean(y) + 3 * sd(y),
+  standardize_y = FALSE
 )
 }
 \arguments{
@@ -54,6 +55,9 @@ the arguments \code{lb} and \code{ub}}
 \item{lb}{the lower bound of the prediction grid, default: \code{mean(y) - 3.0 * sd(y)}}
 
 \item{ub}{the upper bound of the prediction grid, default: \code{mean(y) + 3.0 * sd(y)}}
+
+\item{standardize_y}{Select \code{TRUE} to internally standardize the data,
+fit the model, and present the results in the original scale}
 }
 \value{
 An object of class 'anova_bnp_model'.
