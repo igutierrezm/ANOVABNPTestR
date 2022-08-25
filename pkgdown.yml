@@ -1,7 +1,7 @@
 pandoc: 2.14.2
-pkgdown: 2.0.4
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   getting_started: getting_started.html
-last_built: 2022-06-15T00:25Z
+last_built: 2022-08-25T16:48Z
 
