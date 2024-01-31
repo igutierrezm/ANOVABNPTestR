@@ -12,7 +12,7 @@ shift_plot <- function(fit, group) {
   out <-
     fit |>
     shift_post() |>
-    dplyr::filter(.data$group == group) |>
+    dplyr::filter(.data$group == {{ group }}) |>
     ggplot2::ggplot(ggplot2::aes(x = y, y = shift)) +
     ggplot2::geom_line()
   return(out)
