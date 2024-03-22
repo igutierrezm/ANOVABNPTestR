@@ -13,5 +13,6 @@
 fit <- anova_bnp_normal(yvec, Xmat)
 
 # Plot the shift function for the second cell
-shift_plot(fit, group = 2) # this should look like a tan().
+shift_plot(fit, group = 2) # this should look like an sigmoid
 shift_plot(fit, group = 3) # this should be a straight line.
+
