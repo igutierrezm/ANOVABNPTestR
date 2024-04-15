@@ -11,7 +11,7 @@
 # Fit our ANOVA BNP model
 fit <- anova_bnp_normal(yvec, Xmat, n = 100L)
 
-# Plot the shift function for the second cell
+# Plot the shift function
 shift_plot(fit, group1 = 1, group2 = 2)
 shift_plot(fit, group1 = 1, group2 = 3)
 
