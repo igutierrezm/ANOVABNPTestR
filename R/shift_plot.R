@@ -8,11 +8,12 @@
 #' @importFrom ggplot2 aes geom_line ggplot
 #' @importFrom rlang := .data
 #' @export
-shift_plot <- function(fit, group) {
+shift_plot <- function(fit, group1, group2) {
   out <-
     fit |>
     shift_post() |>
-    dplyr::filter(.data$group == {{ group }}) |>
+    dplyr::filter(.data$group1 == {{ group1 }}) |>
+    dplyr::filter(.data$group2 == {{ group2 }}) |>
     ggplot2::ggplot(ggplot2::aes(x = y, y = shift)) +
     ggplot2::geom_line()
   return(out)
