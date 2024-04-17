@@ -31,9 +31,6 @@
     <loc>/reference/anova_bnp_normal.html</loc>
   </url>
   <url>
-    <loc>/reference/anova_bnp_poisson.html</loc>
-  </url>
-  <url>
     <loc>/reference/example_01.html</loc>
   </url>
   <url>
@@ -46,19 +43,7 @@
     <loc>/reference/group_codes.html</loc>
   </url>
   <url>
-    <loc>/reference/hypothesis_post_interaction.html</loc>
-  </url>
-  <url>
-    <loc>/reference/hypothesis_post_simple.html</loc>
-  </url>
-  <url>
     <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/predictive_plot_interaction.html</loc>
-  </url>
-  <url>
-    <loc>/reference/predictive_plot_simple.html</loc>
   </url>
   <url>
     <loc>/reference/setup.html</loc>
