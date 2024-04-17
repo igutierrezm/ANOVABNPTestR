@@ -2,7 +2,7 @@
 % Please edit documentation in R/anova_bnp_normal.R
 \name{anova_bnp_normal}
 \alias{anova_bnp_normal}
-\title{Fit a Bayesian nonparametric factorial ANOVA model with Gaussian kernel.}
+\title{Fit a Bayesian nonparametric factorial ANOVA model with Gaussian kernel}
 \usage{
 anova_bnp_normal(
   y,
@@ -28,40 +28,40 @@ anova_bnp_normal(
 
 \item{X}{a design matrix (full of integer covariates).}
 
-\item{iter}{the total number of mcmc iterations (default 4000).}
+\item{iter}{the total number of mcmc iterations.}
 
-\item{warmup}{the number of warmup mcmc iterations (default 2000).}
+\item{warmup}{the number of warmup mcmc iterations.}
 
-\item{seed}{the seed for random number generation (default 1L).}
+\item{seed}{the seed for random number generation.}
 
-\item{n}{the number of points y0 for computing p(y0 | y) (default 50L).
-The final grid is conformed by n equispaced points from \code{lb} to \code{ub}, see
-the arguments \code{lb} and \code{ub}}
+\item{n}{the number of points \eqn{y_0} for computing \eqn{p(y_0 | y)}.
+The final grid is conformed by \code{n} equispaced points from \code{lb} to \code{ub}, see
+the arguments \code{lb} and \code{ub}.}
 
-\item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
+\item{rho}{the hyperparameter \eqn{\rho}.}
 
-\item{a}{the hyperparameter \eqn{a} (default 1.0).}
+\item{a}{the hyperparameter \eqn{a}.}
 
-\item{b}{the hyperparameter \eqn{b} (default 1.0).}
+\item{b}{the hyperparameter \eqn{b}.}
 
-\item{a0}{the hyperparameter \eqn{a_0} (default 2.0).}
+\item{a0}{the hyperparameter \eqn{a_0}.}
 
-\item{lambda0}{the hyperparameter \eqn{\lambda_0} (default 1.0).}
+\item{lambda0}{the hyperparameter \eqn{\lambda_0}.}
 
-\item{mu0}{the hyperparameter \eqn{\mu_0} (default 0.0).}
+\item{mu0}{the hyperparameter \eqn{\mu_0}.}
 
-\item{b0}{the hyperparameter \eqn{b_0} (default 1.0).}
+\item{b0}{the hyperparameter \eqn{b_0}.}
 
-\item{lb}{the lower bound of the prediction grid, default: \code{mean(y) - 3.0 * sd(y)}}
+\item{lb}{the lower bound of the prediction grid.}
 
-\item{ub}{the upper bound of the prediction grid, default: \code{mean(y) + 3.0 * sd(y)}}
+\item{ub}{the upper bound of the prediction grid.}
 
 \item{standardize_y}{Select \code{TRUE} to internally standardize the data,
-fit the model, and present the results in the original scale}
+fit the model, and present the results in the original scale.}
 }
 \value{
-An object of class 'anova_bnp_model'.
+An object of class \code{anova_bnp_model}.
 }
 \description{
-Fit a Bayesian nonparametric factorial ANOVA model with Gaussian kernel.
+Fit a Bayesian nonparametric factorial ANOVA model with Gaussian kernel
 }

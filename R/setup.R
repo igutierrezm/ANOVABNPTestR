@@ -18,4 +18,3 @@ setup <- function() {
     Pkg.add(url = url; io=devnull);
   '))
 }
-

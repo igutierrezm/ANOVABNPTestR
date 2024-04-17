@@ -4,7 +4,7 @@
 \alias{shift_plot}
 \title{Plot a shift function}
 \usage{
-shift_plot(fit, group)
+shift_plot(fit, group1, group2)
 }
 \arguments{
 \item{fit}{An object of class anova_bnp_model.}

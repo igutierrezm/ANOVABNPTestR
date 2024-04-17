@@ -2,7 +2,8 @@
 % Please edit documentation in R/anova_bnp_berpoi.R
 \name{anova_bnp_berpoi}
 \alias{anova_bnp_berpoi}
-\title{Fit a Bayesian nonparametric factorial ANOVA model with BerPoi kernel.}
+\title{Fit a Bayesian nonparametric factorial ANOVA
+model with Bernoulli-Poisson kernel}
 \usage{
 anova_bnp_berpoi(
   y,
@@ -26,29 +27,30 @@ anova_bnp_berpoi(
 
 \item{X}{A design matrix (full of integer covariates).}
 
-\item{iter}{the total number of mcmc iterations (default 4000).}
+\item{iter}{the total number of mcmc iterations.}
 
-\item{warmup}{the number of warmup mcmc iterations (default 2000).}
+\item{warmup}{the number of warmup mcmc iterations.}
 
-\item{seed}{the seed for random number generation (default 1L).}
+\item{seed}{the seed for random number generation.}
 
-\item{rho}{the hyperparameter \eqn{\rho} (default 1.0).}
+\item{rho}{the hyperparameter \eqn{\rho}.}
 
-\item{a}{the hyperparameter \eqn{a} (default 1.0).}
+\item{a}{the hyperparameter \eqn{a}.}
 
-\item{b}{the hyperparameter \eqn{b} (default 1.0).}
+\item{b}{the hyperparameter \eqn{b}.}
 
-\item{a1}{the hyperparameter \eqn{a_1} (default 2.0).}
+\item{a1}{the hyperparameter \eqn{a_1}.}
 
-\item{b1}{the hyperparameter \eqn{b_1} (default 4.0).}
+\item{b1}{the hyperparameter \eqn{b_1}.}
 
-\item{alpha0}{the hyperparameter \eqn{\alpha_0} (default 1.0).}
+\item{alpha0}{the hyperparameter \eqn{\alpha_0}.}
 
-\item{beta0}{the hyperparameter \eqn{\beta_0} (default 1.0).}
+\item{beta0}{the hyperparameter \eqn{\beta_0}.}
 }
 \value{
-An object of class 'anova_bnp_model'.
+An object of class \code{anova_bnp_model}.
 }
 \description{
-Fit a Bayesian nonparametric factorial ANOVA model with BerPoi kernel.
+Fit a Bayesian nonparametric factorial ANOVA
+model with Bernoulli-Poisson kernel
 }

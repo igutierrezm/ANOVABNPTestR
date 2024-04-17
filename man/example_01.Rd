@@ -3,7 +3,7 @@
 \docType{data}
 \name{example_01}
 \alias{example_01}
-\title{The 1st dataset used in the "Getting Started" vignette}
+\title{The simulated dataset used in the "Getting Started" vignette}
 \format{
 A data frame with 1000 rows and 3 variables:
 \describe{
@@ -19,6 +19,6 @@ Own elaboration
 example_01
 }
 \description{
-The 1st dataset used in the "Getting Started" vignette
+The simulated dataset used in the "Getting Started" vignette
 }
 \keyword{datasets}
