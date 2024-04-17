@@ -19,3 +19,6 @@ group_codes(fit)
 
 # Show the posterior distribution of gamma
 gamma_post(fit)
+
+# Perform our Dunnet-like test
+joint_significance_probability(fit)
