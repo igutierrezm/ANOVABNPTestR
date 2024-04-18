@@ -28,6 +28,7 @@ anova_bnp_bernoulli <- function(
   out <-
     list(
       f_post = fit$fpost,
+      shift_post = fit$shiftpost,
       gamma_post = fit$group_probs,
       group_codes = fit$group_codes,
       gamma_chain = fit$gamma_chain

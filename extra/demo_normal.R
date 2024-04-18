@@ -22,3 +22,6 @@ gamma_post(fit)
 
 # Perform our Dunnet-like test
 joint_significance_probability(fit)
+
+# Show the shift function
+shift_plot(fit, group1 = 1, group2 = 3)
