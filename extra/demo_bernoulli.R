@@ -5,7 +5,7 @@
   d <- 2 * (rnorm(N) <= 0.7) - 1
   x <- sample(0L:2L, N, replace = TRUE)
   Xmat <- matrix(x, nrow = N, ncol = 1)
-  yvec <- runif(N) <= (0.5 + 0.3 * (x == 2L) * d)
+  yvec <- runif(N) <= (0.5 + 0.3 * (x == 2L))
 }
 
 # Fit our ANOVA BNP model
@@ -22,3 +22,8 @@ gamma_post(fit)
 
 # Perform our Dunnet-like test
 joint_significance_probability(fit)
+
+# Show the shift function
+f_post(fit)
+F_post(fit)
+shift_plot(fit, group1 = 1, group2 = 3)

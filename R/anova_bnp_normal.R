@@ -38,6 +38,7 @@ anova_bnp_normal <- function(
   out <-
     list(
       f_post = fit$fpost,
+      F_post = fit$Fpost,
       shift_post = fit$shiftpost,
       gamma_post = fit$group_probs,
       group_codes = fit$group_codes,
