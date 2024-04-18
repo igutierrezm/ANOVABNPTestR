@@ -37,6 +37,9 @@
     <loc>/reference/f_post.html</loc>
   </url>
   <url>
+    <loc>/reference/gamma_chain.html</loc>
+  </url>
+  <url>
     <loc>/reference/gamma_post.html</loc>
   </url>
   <url>
@@ -44,6 +47,9 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/joint_significance_probability.html</loc>
   </url>
   <url>
     <loc>/reference/setup.html</loc>
